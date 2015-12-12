@@ -1,0 +1,201 @@
+fileFormatVersion: 2
+guid: 92eedf83c9c84fa46b326ba1990a3f51
+timeCreated: 1449942607
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Bullet
+    100004: group
+    100006: group1
+    100008: group10
+    100010: group11
+    100012: group12
+    100014: group13
+    100016: group14
+    100018: group15
+    100020: group16
+    100022: group17
+    100024: group18
+    100026: group19
+    100028: group2
+    100030: group20
+    100032: group21
+    100034: group22
+    100036: group23
+    100038: group24
+    100040: group25
+    100042: group26
+    100044: group27
+    100046: group28
+    100048: group29
+    100050: group3
+    100052: group30
+    100054: group31
+    100056: group4
+    100058: group5
+    100060: group6
+    100062: group7
+    100064: group8
+    100066: group9
+    100068: pasted__group
+    100070: pasted__group1
+    100072: pasted__group1 1
+    100074: pasted__group1 2
+    100076: pasted__group10
+    100078: pasted__group11
+    100080: pasted__group15
+    100082: pasted__group18
+    100084: pasted__group20
+    100086: pasted__group24
+    100088: pasted__group25
+    100090: pasted__group26
+    100092: pasted__group27
+    100094: pasted__group3
+    100096: pasted__group8
+    100098: pasted__group8 1
+    100100: pasted__group9
+    100102: pasted__group9 1
+    100104: pasted__pasted__group1
+    100106: pasted__pasted__group10
+    100108: pasted__pasted__group24
+    100110: pasted__pasted__group25
+    100112: pasted__pasted__group26
+    100114: pasted__pasted__group8
+    100116: pasted__pasted__group9
+    100118: pasted__pasted__pasted__group24
+    100120: pasted__pasted__pasted__group8
+    100122: pasted__pasted__pasted__group9
+    400000: //RootNode
+    400002: Bullet
+    400004: group
+    400006: group1
+    400008: group10
+    400010: group11
+    400012: group12
+    400014: group13
+    400016: group14
+    400018: group15
+    400020: group16
+    400022: group17
+    400024: group18
+    400026: group19
+    400028: group2
+    400030: group20
+    400032: group21
+    400034: group22
+    400036: group23
+    400038: group24
+    400040: group25
+    400042: group26
+    400044: group27
+    400046: group28
+    400048: group29
+    400050: group3
+    400052: group30
+    400054: group31
+    400056: group4
+    400058: group5
+    400060: group6
+    400062: group7
+    400064: group8
+    400066: group9
+    400068: pasted__group
+    400070: pasted__group1
+    400072: pasted__group1 1
+    400074: pasted__group1 2
+    400076: pasted__group10
+    400078: pasted__group11
+    400080: pasted__group15
+    400082: pasted__group18
+    400084: pasted__group20
+    400086: pasted__group24
+    400088: pasted__group25
+    400090: pasted__group26
+    400092: pasted__group27
+    400094: pasted__group3
+    400096: pasted__group8
+    400098: pasted__group8 1
+    400100: pasted__group9
+    400102: pasted__group9 1
+    400104: pasted__pasted__group1
+    400106: pasted__pasted__group10
+    400108: pasted__pasted__group24
+    400110: pasted__pasted__group25
+    400112: pasted__pasted__group26
+    400114: pasted__pasted__group8
+    400116: pasted__pasted__group9
+    400118: pasted__pasted__pasted__group24
+    400120: pasted__pasted__pasted__group8
+    400122: pasted__pasted__pasted__group9
+    2300000: Bullet
+    3300000: Bullet
+    4300000: Bullet
+    6400000: Bullet
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

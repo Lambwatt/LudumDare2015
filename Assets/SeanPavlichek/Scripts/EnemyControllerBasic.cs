@@ -10,9 +10,9 @@ using UnityEngine;
 using System.Collections;
 
 public class EnemyControllerBasic : MonoBehaviour {
-    [SerializeField]
-    [Tooltip("Holds the different pickup types that can be spawned.")]
-    GameObject[] pickupTypes;
+    //[SerializeField]
+    //[Tooltip("Holds the different pickup types that can be spawned.")]
+    //GameObject[] pickupTypes;
 
     [SerializeField]
     [Tooltip("This is used to control how fast the enemy moves.")]
@@ -37,7 +37,7 @@ public class EnemyControllerBasic : MonoBehaviour {
     private AIMode CurrentAIState;
 
     // Stores a reference to the player ship script
-    private ShipPlayerController parentShip;
+    private GameObject player;
 
     // Use this for initialization
     void Start () {
@@ -48,11 +48,11 @@ public class EnemyControllerBasic : MonoBehaviour {
         Destroy(gameObject, 5.0f);
 
         // Locates the player ship and assigns it as the parent
-        GameObject playerShip = GameObject.Find("PlayerShip");
-        if (playerShip != null) // The player ship will be null if the game is over
-        {
-            parentShip = playerShip.GetComponent<ShipPlayerController>();
-        }
+        //GameObject playerShip = GameObject.Find("PlayerShip");
+        //if (playerShip != null) // The player ship will be null if the game is over
+        //{
+            //parentShip = playerShip.GetComponent<ShipPlayerController>();
+        //}
     }
 	
 	// Update is called once per frame
@@ -98,7 +98,7 @@ public class EnemyControllerBasic : MonoBehaviour {
     void UpdateSteerTowards()
     {
         // Finds the direction to the target
-        Vector3 dirToPlayer = parentShip.transform.position - transform.position;
+        Vector3 dirToPlayer = player.transform.position - transform.position;
 
         // Rotates the unit toward the target
         transform.up = Vector3.RotateTowards(transform.up, dirToPlayer, Time.deltaTime * ramSpeed, 0.0f);
@@ -119,10 +119,10 @@ public class EnemyControllerBasic : MonoBehaviour {
         float product = -1;
         float angle = 91;
 
-        if (parentShip != null)
+        if (player != null)
         {
             // Finds the direction to the target
-            Vector3 dirToPlayer = parentShip.transform.position - transform.position;
+            Vector3 dirToPlayer = player.transform.position - transform.position;
             // Normalizes the vector
             Vector3 dirToPlayerNorm = dirToPlayer.normalized;
             // Determines the cosine angle to the target
@@ -204,10 +204,10 @@ public class EnemyControllerBasic : MonoBehaviour {
     public void spawnPickup()
     {
         // Randomly selects the pickup type
-        int type = Random.Range(0, pickupTypes.Length);
+        //int type = Random.Range(0, pickupTypes.Length);
 
         // Creates the new pickup
-        Instantiate(pickupTypes[type], gameObject.transform.position, new Quaternion(0,0,0,0));
+        //Instantiate(pickupTypes[type], gameObject.transform.position, new Quaternion(0,0,0,0));
     }
 
     /** Handles collision.
@@ -221,10 +221,10 @@ public class EnemyControllerBasic : MonoBehaviour {
         } else if (other.tag == "PlayerProjectile")
         {
             // Adds to the player score
-            parentShip.ModScore(scoreValue);
+            //parentShip.ModScore(scoreValue);
 
             // Modifies the player's hits
-            parentShip.ModEnemyHits(1);
+            //parentShip.ModEnemyHits(1);
 
             // Randomly generates a pickup
             int pickupChance = Random.Range(0, 100);
@@ -239,10 +239,10 @@ public class EnemyControllerBasic : MonoBehaviour {
         else if (other.tag == "PlayerMissile")
         {
             // Adds to the player score
-            parentShip.ModScore(scoreValue);
+            //parentShip.ModScore(scoreValue);
 
             // Modifies the player's hits
-            parentShip.ModEnemyHits(1);
+            //parentShip.ModEnemyHits(1);
 
             // Randomly generates a pickup
             int pickupChance = Random.Range(0, 100);
