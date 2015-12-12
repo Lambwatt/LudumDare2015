@@ -57,6 +57,8 @@
      <Compile Include="Assets\MichaelPattieScripts\ProcessCollision.cs" />
      <Compile Include="Assets\MichaelPattieScripts\ScaleWithAirLevel.cs" />
      <Compile Include="Assets\MichaelPattieScripts\Shoot.cs" />
+     <Compile Include="Assets\SeanPavlichek\Scripts\EnemyControllerBasic.cs" />
+     <Compile Include="Assets\SeanPavlichek\Scripts\TurretFiring.cs" />
      <None Include="Assets\Art\Art Asset List.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
