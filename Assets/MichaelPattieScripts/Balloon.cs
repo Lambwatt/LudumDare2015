@@ -3,35 +3,33 @@ using System.Collections;
 
 public class Balloon : MonoBehaviour {
 
-	public float inflatCoefficient;
-	public float deflateCoefficient;
-	public float airContent = 0.1f;
-	public float maxHeight;
-	public float minHeight;
-	public float maxDelta;
+	public BalloonData data;
 
 	// Update is called once per frame
 	void Update () {
-		transform.position+=new Vector3((airContent)*maxDelta,0,0);
+		if(data.dash)
+			return;
+
+		transform.position+=new Vector3(0,(data.airContent)*data.maxDelta,0);
 		deflate();
 
-		if(transform.position.y>maxHeight)
-			transform.position = new Vector3(transform.position.x, maxHeight, transform.position.z);
+		if(transform.position.y>data.maxHeight)
+			transform.position = new Vector3(transform.position.x, data.maxHeight, transform.position.z);
 
-		if(transform.position.y<minHeight)
-			transform.position = new Vector3(transform.position.x, minHeight, transform.position.z);
+		if(transform.position.y<data.minHeight)
+			transform.position = new Vector3(transform.position.x, data.minHeight, transform.position.z);
 	}
 
 	public void inflate(){
-		airContent += inflatCoefficient;
-		if(airContent>1.0f)
-			airContent = 1.0f;
+		data.airContent += data.inflatCoefficient;
+		if(data.airContent>1.0f)
+			data.airContent = 1.0f;
 	}
 
 	private void deflate(){
-		airContent -= deflateCoefficient;
-		if(airContent<-1.0f)
-			airContent = -1.0f;
+		data.airContent -= data.deflateCoefficient;
+		if(data.airContent<-1.0f)
+			data.airContent = -1.0f;
 	}
 	
 }

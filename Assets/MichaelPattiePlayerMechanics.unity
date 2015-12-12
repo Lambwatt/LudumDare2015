@@ -144,7 +144,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!1 &981610283
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,7 +158,7 @@ GameObject:
   - 124: {fileID: 981610285}
   - 81: {fileID: 981610284}
   - 114: {fileID: 981610289}
-  - 54: {fileID: 981610290}
+  - 114: {fileID: 981610290}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -228,12 +228,25 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 981610283}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!114 &981610289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 981610283}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 444e3bf532ef34ee1b673abe5434c6b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1930837305}
+  distance: -10
+--- !u!114 &981610290
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -241,26 +254,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 981610283}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 444e3bf532ef34ee1b673abe5434c6b9, type: 3}
+  m_Script: {fileID: 11500000, guid: 48618d75b9c924d1fbc59b67b8c45e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1930837305}
-  distance: -10
---- !u!54 &981610290
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 981610283}
-  serializedVersion: 2
-  m_Mass: 1.00000001e-07
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 124
-  m_CollisionDetection: 0
+  data: {fileID: 1930837304}
 --- !u!1 &1425952302
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,7 +355,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1435399470}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aebef72bebb0e47c3833a0e560e6e49c, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a12a45f62d52428293d18a9a7e29645, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   levels:
@@ -459,9 +456,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1930837305}
-  - 114: {fileID: 1930837304}
   - 114: {fileID: 1930837303}
   - 114: {fileID: 1930837302}
+  - 114: {fileID: 1930837306}
+  - 114: {fileID: 1930837304}
   m_Layer: 0
   m_Name: Balloon
   m_TagString: Untagged
@@ -480,7 +478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48618d75b9c924d1fbc59b67b8c45e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  data: {fileID: 1930837304}
 --- !u!114 &1930837303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -492,12 +490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66c8964ff8e064ec8bc8abc007cadef3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inflatCoefficient: 0
-  deflateCoefficient: 0
-  airContent: .100000001
-  maxHeight: 0
-  minHeight: 0
-  maxDelta: 0
+  data: {fileID: 1930837304}
 --- !u!114 &1930837304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -506,9 +499,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1930837301}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf05542389a074225bcaf9fff5bc928c, type: 3}
+  m_Script: {fileID: 11500000, guid: dcc61f87fe0bc408c8f498c63ef7814a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
+  inflatCoefficient: .0199999996
+  deflateCoefficient: .00999999978
+  airContent: .100000001
+  maxHeight: 4.80000019
+  minHeight: -4.80000019
+  maxDelta: .100000001
+  speedBoost: 0
+  dash: 0
 --- !u!4 &1930837305
 Transform:
   m_ObjectHideFlags: 0
@@ -523,3 +525,16 @@ Transform:
   - {fileID: 1425952303}
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &1930837306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1930837301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f296d68ea238a464a898e3996ce46cd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 1930837304}
+  balloon: {fileID: 1930837303}
