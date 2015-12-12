@@ -20,7 +20,6 @@ public class ScaleWithAirLevel : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (data);
 		float scaleChange = scaleFactor*(data.airContent+1.0f);
 		transform.localScale = baseScale + new Vector3(scaleChange, scaleChange, scaleChange);
 		transform.localPosition = basePosition + new Vector3(0, scaleChange/2.0f, 0);
