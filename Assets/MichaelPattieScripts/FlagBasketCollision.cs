@@ -3,13 +3,15 @@ using System.Collections;
 
 public class FlagBasketCollision : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+	public BalloonData data;
 	
-	}
-	
+
 	// Update is called once per frame
 	void Update () {
 	
+	}
+
+	void OnTriggerEnter(Collider other){
+		//data.objectHittingBasket = other;
 	}
 }

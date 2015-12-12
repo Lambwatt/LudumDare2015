@@ -54,10 +54,9 @@
 -define:RENDER_SOFTWARE_CURSOR
 -define:ENABLE_LOCALIZATION
 -define:ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION
--define:UNITY_STANDALONE_OSX
+-define:UNITY_STANDALONE_WIN
 -define:UNITY_STANDALONE
 -define:ENABLE_SUBSTANCE
--define:ENABLE_GAMECENTER
 -define:ENABLE_TEXTUREID_MAP
 -define:ENABLE_RUNTIME_GI
 -define:ENABLE_MOVIES
@@ -65,6 +64,7 @@
 -define:ENABLE_CRUNCH_TEXTURE_COMPRESSION
 -define:ENABLE_LOG_MIXED_STACKTRACE
 -define:ENABLE_UNITYWEBREQUEST
+-define:ENABLE_EVENT_QUEUE
 -define:ENABLE_WEBSOCKET_HOST
 -define:ENABLE_MONO
 -define:ENABLE_PROFILER
@@ -78,11 +78,17 @@
 'Assets/MichaelPattieScripts/Balloon.cs'
 'Assets/MichaelPattieScripts/BalloonController.cs'
 'Assets/MichaelPattieScripts/BalloonData.cs'
+'Assets/MichaelPattieScripts/FlagBalloonCollision.cs'
+'Assets/MichaelPattieScripts/FlagBasketCollision.cs'
 'Assets/MichaelPattieScripts/Follow.cs'
 'Assets/MichaelPattieScripts/MoveRight.cs'
 'Assets/MichaelPattieScripts/MoveRightIndependent.cs'
 'Assets/MichaelPattieScripts/ProcessCollision.cs'
 'Assets/MichaelPattieScripts/ScaleWithAirLevel.cs'
 'Assets/MichaelPattieScripts/Shoot.cs'
+'Assets/SeanPavlichek/Scripts/EnemyControllerBasic.cs'
+'Assets/SeanPavlichek/Scripts/Explosion.cs'
+'Assets/SeanPavlichek/Scripts/Projectile.cs'
+'Assets/SeanPavlichek/Scripts/TurretFiring.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Xml.Linq.dll'

@@ -37,7 +37,7 @@ public class EnemyControllerBasic : MonoBehaviour {
     private AIMode CurrentAIState;
 
     // Stores a reference to the player ship script
-    private GameObject player;
+    public GameObject player;
 
     // Use this for initialization
     void Start () {
