@@ -362,7 +362,7 @@ MonoBehaviour:
   - {fileID: 153014, guid: 0455b7bb421fa4e2496b145073cd495d, type: 2}
   - {fileID: 136968, guid: 0303f2cb662334708be9f55e602faff9, type: 2}
   player: {fileID: 1930837305}
-  screenWidth: 17.6900005
+  screenWidth: 17.7999992
 --- !u!4 &1435399472
 Transform:
   m_ObjectHideFlags: 0
@@ -555,5 +555,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 119576, guid: 0d1ca895bf85543ac9eec0afe6652018, type: 2}
-  barrelLength: 1
+  barrelLength: 2
   data: {fileID: 1930837304}

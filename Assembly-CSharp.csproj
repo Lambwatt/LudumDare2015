@@ -52,6 +52,7 @@
      <Compile Include="Assets\MichaelPattieScripts\Follow.cs" />
      <Compile Include="Assets\MichaelPattieScripts\MoveRight.cs" />
      <Compile Include="Assets\MichaelPattieScripts\MoveRightIndependent.cs" />
+     <Compile Include="Assets\MichaelPattieScripts\ScaleWithAirLevel.cs" />
      <Compile Include="Assets\MichaelPattieScripts\Shoot.cs" />
      <None Include="Assets\Art\Art Asset List.txt" />
  <Reference Include="UnityEngine.UI">

@@ -19,7 +19,6 @@ public class AddLevel : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log ((player.position.x-lastLevelX)+">"+screenWidth+" = "+(player.position.x-lastLevelX > screenWidth));
 		if(player.position.x-lastLevelX > screenWidth){
 			Instantiate(levels[levelIndex], new Vector3(player.position.x+screenWidth,0,0), Quaternion.identity);
 			lastLevelX = player.position.x;
