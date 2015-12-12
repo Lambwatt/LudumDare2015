@@ -74,6 +74,10 @@
 -define:UNITY_EDITOR
 -define:UNITY_EDITOR_64
 -define:UNITY_EDITOR_OSX
-'Assets/RespondToButtons.cs'
+'Assets/AddLevel.cs'
+'Assets/Follow.cs'
+'Assets/MichaelPattieScripts/Balloon.cs'
+'Assets/MichaelPattieScripts/MoveLeft.cs'
+'Assets/MichaelPattieScripts/RespondToButtons.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Xml.Linq.dll'

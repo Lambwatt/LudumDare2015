@@ -47,7 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\AddLevel.cs" />
      <Compile Include="Assets\Follow.cs" />
-     <Compile Include="Assets\MichaelPattieScripts\Deflate.cs" />
+     <Compile Include="Assets\MichaelPattieScripts\Balloon.cs" />
      <Compile Include="Assets\MichaelPattieScripts\MoveLeft.cs" />
      <Compile Include="Assets\MichaelPattieScripts\RespondToButtons.cs" />
  <Reference Include="UnityEngine.UI">

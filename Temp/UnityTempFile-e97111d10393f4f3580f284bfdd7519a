@@ -76,7 +76,7 @@
 -define:UNITY_EDITOR_OSX
 'Assets/AddLevel.cs'
 'Assets/Follow.cs'
-'Assets/MichaelPattieScripts/Deflate.cs'
+'Assets/MichaelPattieScripts/Balloon.cs'
 'Assets/MichaelPattieScripts/MoveLeft.cs'
 'Assets/MichaelPattieScripts/RespondToButtons.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
