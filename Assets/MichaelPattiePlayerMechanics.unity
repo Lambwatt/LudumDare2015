@@ -269,6 +269,8 @@ GameObject:
   - 33: {fileID: 1425952306}
   - 65: {fileID: 1425952305}
   - 23: {fileID: 1425952304}
+  - 114: {fileID: 1425952307}
+  - 54: {fileID: 1425952308}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -331,6 +333,33 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1425952302}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1425952307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1425952302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0ab54ac49474b02b71d19bf37558f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 1930837304}
+--- !u!54 &1425952308
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1425952302}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1435399470
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,6 +416,8 @@ GameObject:
   - 135: {fileID: 1570428032}
   - 23: {fileID: 1570428031}
   - 114: {fileID: 1570428034}
+  - 114: {fileID: 1570428035}
+  - 54: {fileID: 1570428036}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -462,6 +493,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 1930837304}
   scaleFactor: .5
+--- !u!114 &1570428035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1570428029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23e42f4ca51d34685b30701e8b06d6c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 1930837304}
+--- !u!54 &1570428036
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1570428029}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1930837301
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,6 +533,7 @@ GameObject:
   - 114: {fileID: 1930837306}
   - 114: {fileID: 1930837304}
   - 114: {fileID: 1930837307}
+  - 114: {fileID: 1930837308}
   m_Layer: 0
   m_Name: Balloon
   m_TagString: Untagged
@@ -572,4 +631,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 119576, guid: 0d1ca895bf85543ac9eec0afe6652018, type: 2}
   barrelLength: 2
+  data: {fileID: 1930837304}
+--- !u!114 &1930837308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1930837301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbeca84a0c0f84763b19b81e432d2c77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   data: {fileID: 1930837304}

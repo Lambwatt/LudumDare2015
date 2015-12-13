@@ -5,13 +5,23 @@ public class ProcessCollision : MonoBehaviour {
 
 	public BalloonData data;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
 	// Update is called once per frame
 	void Update () {
-	
+
+		if(data.objectHittingBalloon != null){
+			//Debug.LogError ("detected balloon collision");
+
+			//handlecollision
+
+			data.objectHittingBalloon = null;
+		}
+
+		if(data.objectHittingBasket != null){
+			//Debug.LogError ("detected basket collision");
+			
+			//handlecollision
+			
+			data.objectHittingBasket = null;
+		}
 	}
 }

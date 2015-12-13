@@ -12,6 +12,7 @@ public class FlagBasketCollision : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other){
-		//data.objectHittingBasket = other;
+		//Debug.LogError("flagged basket");
+		data.objectHittingBasket = other;
 	}
 }

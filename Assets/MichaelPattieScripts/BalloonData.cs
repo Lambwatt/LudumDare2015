@@ -17,8 +17,8 @@ public class BalloonData : MonoBehaviour {
 	[HideInInspector] public bool shooting = false;
 	[HideInInspector] public bool shotReady = true;
 	[HideInInspector] public float currentShotCooldown = 0.0f;
-	[HideInInspector] public GameObject objectHittingBalloon;
-	[HideInInspector] public GameObject objectHittingBasket;
+	[HideInInspector] public Collider objectHittingBalloon;
+	[HideInInspector] public Collider objectHittingBasket;
 
 
 	// Use this for initialization
