@@ -9,10 +9,11 @@
 using UnityEngine;
 using System.Collections;
 
-public class EnemyControllerBasic : MonoBehaviour {
-    //[SerializeField]
-    //[Tooltip("Holds the different pickup types that can be spawned.")]
-    //GameObject[] pickupTypes;
+public class EnemyControllerAxeMonkey : MonoBehaviour
+{
+    [SerializeField]
+    [Tooltip("Holds the different pickup types that can be spawned.")]
+    GameObject[] pickupTypes;
 
     [SerializeField]
     [Tooltip("This is used to control how fast the enemy moves.")]
@@ -27,8 +28,8 @@ public class EnemyControllerBasic : MonoBehaviour {
     int scoreValue = 50;
 
     [SerializeField]
-    [Tooltip("This is used to control whether the enemy should be aggressive.")]
-    bool aggressive;
+    [Tooltip("This is used to control how long the monkey will attempt to follow the player's movements.")]
+    float chaseTime = 3.0f;
 
     // Denotes possible AI configurations
     private enum AIMode { Normal, Ramming, SteerTowards };
@@ -39,28 +40,52 @@ public class EnemyControllerBasic : MonoBehaviour {
     // Stores a reference to the player ship script
     public GameObject player;
 
+    // Stores a reference to the player stat handler
+    private BalloonData playerData;
+
+    // Stores a reference to the player damage handler
+    private BalloonDamager playerDamager;
+
+    // Stores whether the player has been seen
+    private bool playerSeen = false;
+
+    // Stores the original y position
+    private float startY;
+
+    // Stores the amount of time the monkey has chased the player
+    private float timeSpent;
+
+    // Stores whether the monkey is moving up or down in the default movement pattern
+    private int dir = 1;
+
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         // Start in the normal AI state
         CurrentAIState = AIMode.Normal;
 
+        startY = gameObject.transform.position.y;
+
         // Destroys this unit after a certain period of time
-        Destroy(gameObject, 5.0f);
+        // Destroy(gameObject, 5.0f);
 
-        // Locates the player ship and assigns it as the parent
-        //GameObject playerShip = GameObject.Find("PlayerShip");
-        //if (playerShip != null) // The player ship will be null if the game is over
-        //{
-            //parentShip = playerShip.GetComponent<ShipPlayerController>();
-        //}
+        if (player != null) // The player ship will be null if the game is over
+        {
+            playerData = player.GetComponent<BalloonData>();
+            playerDamager = player.GetComponent<BalloonDamager>();
+        }
     }
-	
-	// Update is called once per frame
-	void Update () {
-        // Determines what the current AI state should be
-        determineAIState();
 
-	    switch (CurrentAIState)
+    // Update is called once per frame
+    void Update()
+    {
+        if (CurrentAIState != AIMode.Ramming)
+        {
+            // Determines what the current AI state should be
+            determineAIState();
+        }
+
+        switch (CurrentAIState)
         {
             case AIMode.Normal: // If the unit is in normal AI mode
                 UpdateNormal();
@@ -75,14 +100,38 @@ public class EnemyControllerBasic : MonoBehaviour {
                 Debug.Log("Unknown AI State " + CurrentAIState);
                 break;
         }
-	}
+    }
 
     /** Handles the update function when the unit is in the Normal AIMode.
     */
     void UpdateNormal()
     {
-        // Moves the unit
-        transform.position += transform.up * Time.deltaTime * moveSpeed;
+        if (playerSeen)
+        {
+            // Moves the unit
+            transform.position += transform.right * Time.deltaTime * moveSpeed;
+        } else
+        {
+            if (dir == 1 && gameObject.transform.position.y < (startY + 5))
+            {
+                // Change nothing
+            }
+            else if (dir == 1 && gameObject.transform.position.y >= (startY + 5))
+            {
+                dir = -1;
+            }
+            else if (dir == -1 && gameObject.transform.position.y > (startY - 5))
+            {
+                // Change nothing
+            }
+            else if (dir == -1 && gameObject.transform.position.y <= (startY - 5))
+            {
+                dir = 1;
+            }
+
+            // Moves the unit
+            transform.position -= dir * transform.up * Time.deltaTime * moveSpeed;
+        }
     }
 
     /** Handles the update function when the unit is in the Ramming AIMode.
@@ -90,7 +139,7 @@ public class EnemyControllerBasic : MonoBehaviour {
     void UpdateRamming()
     {
         // Moves the unit
-        transform.position += transform.up * Time.deltaTime * ramSpeed;
+        transform.position += transform.right * Time.deltaTime * ramSpeed;
     }
 
     /** Handles the update function when the unit is in the Ramming AIMode.
@@ -101,7 +150,10 @@ public class EnemyControllerBasic : MonoBehaviour {
         Vector3 dirToPlayer = player.transform.position - transform.position;
 
         // Rotates the unit toward the target
-        transform.up = Vector3.RotateTowards(transform.up, dirToPlayer, Time.deltaTime * ramSpeed, 0.0f);
+        transform.right = Vector3.RotateTowards(transform.right, dirToPlayer, Time.deltaTime * ramSpeed, 0.0f);
+
+        // Updates chase time
+        timeSpent += Time.deltaTime;
 
         // Moves the unit toward the target
         UpdateNormal();
@@ -112,7 +164,14 @@ public class EnemyControllerBasic : MonoBehaviour {
     void determineAIState()
     {
         // Checks if the player is in range
-        bool canSee = CanSeeTarget("Player");
+        // bool canSee = CanSeeTarget("Player");
+        bool canSee = false;
+        Vector3 dirToPlayer = player.transform.position - transform.position;
+
+        if (Mathf.Sqrt(dirToPlayer.y * dirToPlayer.y + dirToPlayer.x * dirToPlayer.x) < 10)
+        {
+            canSee = true;
+        }
 
         // Declares necessary variables in case the parent ship is null
         // Sets them to values that would cause the enemy to use default movement if the player is dead
@@ -121,8 +180,6 @@ public class EnemyControllerBasic : MonoBehaviour {
 
         if (player != null)
         {
-            // Finds the direction to the target
-            Vector3 dirToPlayer = player.transform.position - transform.position;
             // Normalizes the vector
             Vector3 dirToPlayerNorm = dirToPlayer.normalized;
             // Determines the cosine angle to the target
@@ -133,70 +190,23 @@ public class EnemyControllerBasic : MonoBehaviour {
             angle = angle * Mathf.Rad2Deg;
         }
 
-        if (canSee) // If the player is in range, begin ramming mode
+        if (!playerSeen && canSee) // Wider angle for aggressive enemies
+        {
+            // Change the state to SteerTowards
+            CurrentAIState = AIMode.SteerTowards;
+
+            playerSeen = true;
+
+            // Changes the color of the unit
+            //GetComponent<Renderer>().material.color = Color.yellow;
+        } else if (playerSeen && timeSpent >= chaseTime) // If the player is in range, begin ramming mode
         {
             // Changes the mode to Ramming
             CurrentAIState = AIMode.Ramming;
 
             // Changes the color of the unit
-            GetComponent<Renderer>().material.color = Color.red;
+            //GetComponent<Renderer>().material.color = Color.red;
         }
-        else if (aggressive && (product > 0 && angle < 90)) // Wider angle for aggressive enemies
-        {
-            // Change the state to SteerTowards
-            CurrentAIState = AIMode.SteerTowards;
-
-            // Changes the color of the unit
-            GetComponent<Renderer>().material.color = Color.yellow;
-        }
-        else if (!aggressive && (product > 0 && angle < 40))
-        {
-            // Change the state to SteerTowards
-            CurrentAIState = AIMode.SteerTowards;
-
-            // Changes the color of the unit
-            GetComponent<Renderer>().material.color = Color.green;
-        }
-        else
-        {
-            if (aggressive) // If the enemy is not supposed to return to normal mode, continue ramming
-            {
-                // Changes the mode to Ramming
-                CurrentAIState = AIMode.Ramming;
-
-                // Changes the color of the unit
-                GetComponent<Renderer>().material.color = Color.red;
-            } else // If this is a normal enemy, resume normal mode
-            {
-                // Changes the mode to Normal
-                CurrentAIState = AIMode.Normal;
-
-                // Changes the color back to normal
-                GetComponent<Renderer>().material.color = Color.white;
-            }
-        }
-    }
-
-    /** Checks if this unit can see the target
-    */
-    bool CanSeeTarget(string target)
-    {
-        // Stores the units hit by the raycast
-        RaycastHit hitInfo;
-
-        // Search for targets
-        bool hitAny = Physics.Raycast(transform.position, transform.up, out hitInfo);
-
-        if (hitAny) // If anything was hit
-        {
-            if (hitInfo.collider.gameObject.tag == target) // Checks if the collider seen is the target
-            {
-                return true;
-            }
-        }
-
-        // Default case
-        return false;
     }
 
     /** Handles pickup spawning.
@@ -218,38 +228,11 @@ public class EnemyControllerBasic : MonoBehaviour {
         {
             // Destroys the enemy ship
             Destroy(gameObject);
-        } else if (other.tag == "PlayerProjectile")
-        {
-            // Adds to the player score
-            //parentShip.ModScore(scoreValue);
-
-            // Modifies the player's hits
-            //parentShip.ModEnemyHits(1);
-
-            // Randomly generates a pickup
-            int pickupChance = Random.Range(0, 100);
-            if (pickupChance < 50)
-            {
-                spawnPickup();
-            }
-
-            // Destroys the enemy if it encounters a projectile
-            Destroy(gameObject);
         }
-        else if (other.tag == "PlayerMissile")
+        else if (other.tag == "PlayerProjectile")
         {
             // Adds to the player score
-            //parentShip.ModScore(scoreValue);
-
-            // Modifies the player's hits
-            //parentShip.ModEnemyHits(1);
-
-            // Randomly generates a pickup
-            int pickupChance = Random.Range(0, 100);
-            if (pickupChance < 50)
-            {
-                spawnPickup();
-            }
+            //playerData.ModScore(scoreValue);
 
             // Destroys the enemy if it encounters a projectile
             Destroy(gameObject);
