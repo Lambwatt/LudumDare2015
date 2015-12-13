@@ -57,21 +57,17 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BalloonDamager.cs" />
     <Compile Include="Assets\MichaelPattieScripts\AddLevel.cs" />
     <Compile Include="Assets\MichaelPattieScripts\Balloon.cs" />
     <Compile Include="Assets\MichaelPattieScripts\BalloonController.cs" />
     <Compile Include="Assets\MichaelPattieScripts\BalloonData.cs" />
+    <Compile Include="Assets\MichaelPattieScripts\BlockCollisionResponse.cs" />
     <Compile Include="Assets\MichaelPattieScripts\FlagBalloonCollision.cs" />
     <Compile Include="Assets\MichaelPattieScripts\FlagBasketCollision.cs" />
     <Compile Include="Assets\MichaelPattieScripts\Follow.cs" />
@@ -80,7 +76,9 @@
     <Compile Include="Assets\MichaelPattieScripts\ProcessCollision.cs" />
     <Compile Include="Assets\MichaelPattieScripts\ScaleWithAirLevel.cs" />
     <Compile Include="Assets\MichaelPattieScripts\Shoot.cs" />
-    <Compile Include="Assets\SeanPavlichek\Scripts\EnemyControllerBasic.cs" />
+    <Compile Include="Assets\SeanPavlichek\Scripts\EnemyControllerArcherMonkey.cs" />
+    <Compile Include="Assets\SeanPavlichek\Scripts\EnemyControllerAxeMonkey.cs" />
+    <Compile Include="Assets\SeanPavlichek\Scripts\EnemyControllerLancerMonkey.cs" />
     <Compile Include="Assets\SeanPavlichek\Scripts\Explosion.cs" />
     <Compile Include="Assets\SeanPavlichek\Scripts\Projectile.cs" />
     <Compile Include="Assets\SeanPavlichek\Scripts\TurretFiring.cs" />
