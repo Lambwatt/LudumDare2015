@@ -1,6 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MichaelPattieScripts/GetInFrontAndDieOffScreen.cs">
+    <Files>
+      <File FileName="Assets/MichaelPattieScripts/AddLevel.cs" Line="21" Column="25" />
+      <File FileName="Assets/MichaelPattieScripts/GetInFrontAndDieOffScreen.cs" Line="7" Column="27" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
