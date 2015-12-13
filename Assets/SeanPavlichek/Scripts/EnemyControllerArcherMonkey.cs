@@ -80,7 +80,7 @@ public class EnemyControllerArcherMonkey : MonoBehaviour {
         {
             fireTimer = 0;
             GameObject newArrow;
-            newArrow = Instantiate(arrow, firePosition.transform.position, gameObject.transform.rotation) as GameObject;
+            newArrow = Instantiate(arrow, firePosition.transform.position, firePosition.transform.rotation) as GameObject;
             newArrow.transform.Rotate(0, Random.Range(-fireError, fireError), 0);
         }
     }
@@ -127,13 +127,16 @@ public class EnemyControllerArcherMonkey : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
-            // Destroys the enemy ship
+            // Damages the player
+            playerDamager.damagePlayer(1);
+
+            // Destroys the enemy
             Destroy(gameObject);
         }
         else if (other.tag == "PlayerProjectile")
         {
             // Adds to the player score
-            //playerData.ModScore(scoreValue);
+            playerData.ModScore(scoreValue);
 
             // Destroys the enemy if it encounters a projectile
             Destroy(gameObject);
