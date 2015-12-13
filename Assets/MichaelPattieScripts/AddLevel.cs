@@ -8,7 +8,7 @@ public class AddLevel : MonoBehaviour {
 	public float sceneWidth;
 	private int levelIndex = 0;
 	private float nextLevelX = 0;
-	private int levelCount = 0;
+	[HideInInspector] public int levelCount = 0;
 
 	// Use this for initialization
 	void Start () {

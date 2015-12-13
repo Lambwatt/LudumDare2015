@@ -51,6 +51,7 @@
      <Compile Include="Assets\MichaelPattieScripts\BalloonController.cs" />
      <Compile Include="Assets\MichaelPattieScripts\BalloonData.cs" />
      <Compile Include="Assets\MichaelPattieScripts\BlockCollisionResponse.cs" />
+     <Compile Include="Assets\MichaelPattieScripts\CheckDifficulty.cs" />
      <Compile Include="Assets\MichaelPattieScripts\FlagBalloonCollision.cs" />
      <Compile Include="Assets\MichaelPattieScripts\FlagBasketCollision.cs" />
      <Compile Include="Assets\MichaelPattieScripts\Follow.cs" />
