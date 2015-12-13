@@ -11,9 +11,12 @@ public class BalloonData : MonoBehaviour {
 	public float minHeight;
 	public float maxDelta;
 	public float speedBoost;
+	public float shotCooldown;
 
-	[HideInInspector]
-	public bool dash;
+	[HideInInspector] public bool dash = false;
+	[HideInInspector] public bool shooting = false;
+	[HideInInspector] public bool shotReady = true;
+	[HideInInspector] public float currentShotCooldown = 0.0f;
 
 
 	// Use this for initialization

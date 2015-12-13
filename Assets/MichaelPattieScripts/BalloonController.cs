@@ -16,13 +16,16 @@ public class BalloonController : MonoBehaviour {
 		if(Input.GetKey(KeyCode.B)){
 			inputHash+=2;
 		}
+
 		data.dash = false;
+		data.shooting = false;
+
 		switch(inputHash){
 		case 1:
 			balloon.inflate();
 			break;
 		case 2:
-			//shoot
+			data.shooting = true;
 			break;
 		case 3:
 			data.dash = true;
