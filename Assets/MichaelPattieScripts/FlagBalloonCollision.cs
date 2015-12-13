@@ -3,13 +3,16 @@ using System.Collections;
 
 public class FlagBalloonCollision : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+	public BalloonData data;
 	
-	}
 	
 	// Update is called once per frame
 	void Update () {
+		
+	}
 	
+	void OnTriggerEnter(Collider other){
+		//Debug.LogError("flagged baslloon");
+		data.objectHittingBalloon = other.tag;
 	}
 }
