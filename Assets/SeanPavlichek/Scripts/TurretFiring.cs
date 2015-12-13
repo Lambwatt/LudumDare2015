@@ -16,12 +16,13 @@ public class TurretFiring : MonoBehaviour {
     [Tooltip("The animation for the explosion.")]
     private GameObject Explosion;
 
-    private Vector3 firePosition;
+    [SerializeField]
+    [Tooltip("Where bullets are fired from.")]
+    private GameObject firePosition;
 
     // Use this for initialization
     void Start()
     {
-        firePosition = gameObject.transform.position;
     }
 
     // Update is called once per frame
@@ -33,9 +34,9 @@ public class TurretFiring : MonoBehaviour {
 
         if (fireTimer > fireRate)
         {
-            Instantiate(Bullet, firePosition, gameObject.transform.rotation);
-            Instantiate(Explosion, firePosition, gameObject.transform.rotation);
             fireTimer = 0;
+            Instantiate(Bullet, firePosition.transform.position, gameObject.transform.rotation);
+            Instantiate(Explosion, firePosition.transform.position, gameObject.transform.rotation);
         }
     }
 }
