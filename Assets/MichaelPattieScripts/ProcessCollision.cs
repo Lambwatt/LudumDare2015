@@ -9,19 +9,25 @@ public class ProcessCollision : MonoBehaviour {
 	void Update () {
 
 		if(data.objectHittingBalloon != null){
-			//Debug.LogError ("detected balloon collision");
-
-			//handlecollision
+			applyCollisionResults(data.objectHittingBalloon);
 
 			data.objectHittingBalloon = null;
 		}
 
 		if(data.objectHittingBasket != null){
-			//Debug.LogError ("detected basket collision");
-			
-			//handlecollision
+			applyCollisionResults(data.objectHittingBasket);
 			
 			data.objectHittingBasket = null;
+		}
+	}
+
+	void applyCollisionResults(string colTag){
+		switch(colTag){
+		case "block":
+			data.health -= 5;
+			break;
+		default:
+			break;
 		}
 	}
 }

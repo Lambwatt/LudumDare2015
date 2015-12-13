@@ -13,6 +13,6 @@ public class FlagBalloonCollision : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider other){
 		//Debug.LogError("flagged baslloon");
-		data.objectHittingBalloon = other;
+		data.objectHittingBalloon = other.tag;
 	}
 }
