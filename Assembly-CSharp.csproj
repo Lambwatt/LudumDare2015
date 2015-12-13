@@ -63,6 +63,8 @@
      <Compile Include="Assets\SeanPavlichek\Scripts\Explosion.cs" />
      <Compile Include="Assets\SeanPavlichek\Scripts\Projectile.cs" />
      <Compile Include="Assets\SeanPavlichek\Scripts\TurretFiring.cs" />
+     <Compile Include="Assets\SpawnEnemy.cs" />
+     <Compile Include="Assets\SpawnManager.cs" />
      <None Include="Assets\Art\Art Asset List.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

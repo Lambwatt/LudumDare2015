@@ -20,7 +20,11 @@ public class BalloonData : MonoBehaviour {
 	[HideInInspector] public float currentShotCooldown = 0.0f;
 	[HideInInspector] public string objectHittingBalloon;
 	[HideInInspector] public string objectHittingBasket;
+	[HideInInspector] public int score = 0;
 
+	public void ModScore(int change){
+		score += change;
+	}
 
 	// Use this for initialization
 	void Start () {

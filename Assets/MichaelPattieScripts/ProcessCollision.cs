@@ -22,12 +22,13 @@ public class ProcessCollision : MonoBehaviour {
 	}
 
 	void applyCollisionResults(string colTag){
-		switch(colTag){
-		case "block":
-			data.health -= 5;
-			break;
-		default:
-			break;
-		}
+//		switch(colTag){
+//		case "Sandbag":
+//			data.cancelPowerups();
+//			data.deflatePower = true;
+//			break;
+//		default:
+//			break;
+//		}
 	}
 }
