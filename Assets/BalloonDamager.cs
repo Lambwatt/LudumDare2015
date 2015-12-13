@@ -6,6 +6,7 @@ public class BalloonDamager : MonoBehaviour {
 	public BalloonData data;
 
 	void damagePlayer(int damage){
-		data.health -= damage;
+		if(!data.immunityOn)
+			data.health -= damage;
 	}
 }

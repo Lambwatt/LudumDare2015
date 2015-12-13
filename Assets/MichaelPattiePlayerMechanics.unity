@@ -587,6 +587,17 @@ MonoBehaviour:
   speedBoost: 2
   shotCooldown: 1
   health: 100
+  speedPower: 0
+  inflatCoefficientPower: 0
+  deflateCoefficientPower: 0
+  speedUpPower: 0
+  slowDownPower: 0
+  speedPowerOn: 0
+  inflatCoefficientPowerOn: 0
+  deflateCoefficientPowerOn: 0
+  speedUpPowerOn: 0
+  slowDownPowerOn: 0
+  immunityOn: 0
   dash: 0
   shooting: 0
   shotReady: 1
