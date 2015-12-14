@@ -31,7 +31,7 @@ public class AddLevel : MonoBehaviour {
 
 	public float getNextScenePosition(){
 		levelCount++;
-		Debug.Log ("level count  = "+levelCount);
+//		Debug.Log ("level count  = "+levelCount);
 		return sceneWidth*(levelCount-1);
 	}
 }

@@ -3,13 +3,14 @@ using System.Collections;
 
 public class BulletResponse : MonoBehaviour{
 
-	public int damage;
+	public int points;
 
 	void OnCollisionEnter(Collision col){
-		if(col.gameObject.CompareTag("PlayerProjectils")){
+		Debug.Log ("When hit, found "+col.gameObject.tag);
+		if(col.gameObject.CompareTag("PlayerProjectile")){
 
 			//col.gameObject.transform.GetComponentInParent<BalloonDamager>().damagePlayer(damage);
-			GameObject.FindGameObjectWithTag("GameManager").GetComponent<Score>().updateScore(damage*25);
+			GameObject.FindGameObjectWithTag("GameManager").GetComponent<Score>().updateScore(points);
 
 			//Spawn particle system
 			Destroy(col.gameObject);
