@@ -659,6 +659,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 1930837304}
+  speedPowerOn: 0
+  inflatCoefficientPowerOn: 0
+  deflateCoefficientPowerOn: 0
+  speedUpPowerOn: 0
+  slowDownPowerOn: 0
+  immunityOn: 0
 --- !u!95 &1930837309
 Animator:
   serializedVersion: 3

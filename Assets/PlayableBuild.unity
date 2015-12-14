@@ -420,8 +420,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels:
   - Level001
+  - Level002
+  - Level003
+  - Level004
+  - Level006
+  - Level007
+  - Level008
+  - Level009
+  - Level011
+  - Level013
   player: {fileID: 1930837305}
   sceneWidth: 64
+  levelCount: 0
 --- !u!4 &1435399472
 Transform:
   m_ObjectHideFlags: 0
@@ -658,6 +668,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 1930837304}
+  speedPowerOn: 0
+  inflatCoefficientPowerOn: 0
+  deflateCoefficientPowerOn: 0
+  speedUpPowerOn: 0
+  slowDownPowerOn: 0
+  immunityOn: 0
 --- !u!95 &1930837309
 Animator:
   serializedVersion: 3
