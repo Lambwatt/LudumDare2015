@@ -6,10 +6,25 @@ ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
     100000: //RootNode
+    100002: gunBarrel
+    100004: gunBase
+    100006: gunBox
     400000: //RootNode
+    400002: gunBarrel
+    400004: gunBase
+    400006: gunBox
     2300000: //RootNode
+    2300002: gunBarrel
+    2300004: gunBase
+    2300006: gunBox
     3300000: //RootNode
+    3300002: gunBarrel
+    3300004: gunBase
+    3300006: gunBox
     4300000: Object004
+    4300002: gunBase
+    4300004: gunBox
+    4300006: gunBarrel
     9500000: //RootNode
   materials:
     importMaterials: 1

@@ -136,7 +136,7 @@ public class EnemyControllerArcherMonkey : MonoBehaviour {
         else if (other.tag == "PlayerProjectile")
         {
             // Adds to the player score
-            playerData.ModScore(scoreValue);
+            //playerData.ModScore(scoreValue);
 
             // Destroys the enemy if it encounters a projectile
             Destroy(gameObject);
