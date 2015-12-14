@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class BalloonData : MonoBehaviour {
 
+	public Text healthText;
 	public float speed;
 	public float inflatCoefficient;
 	public float deflateCoefficient;
@@ -50,6 +52,8 @@ public class BalloonData : MonoBehaviour {
 
 			Application.LoadLevel("GameOver");
 			
+		}else{
+			healthText.text = ""+health;
 		}
 	}
 
