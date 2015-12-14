@@ -279,7 +279,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 405832, guid: f2ea65b33dcfd4ab3a8d240f8d44e7b8, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.57999992
       objectReference: {fileID: 0}
     - target: {fileID: 405832, guid: f2ea65b33dcfd4ab3a8d240f8d44e7b8, type: 2}
       propertyPath: m_LocalPosition.z
@@ -307,16 +307,20 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 405832, guid: f2ea65b33dcfd4ab3a8d240f8d44e7b8, type: 2}
       propertyPath: m_LocalScale.y
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 405832, guid: f2ea65b33dcfd4ab3a8d240f8d44e7b8, type: 2}
       propertyPath: m_LocalScale.x
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 405832, guid: f2ea65b33dcfd4ab3a8d240f8d44e7b8, type: 2}
       propertyPath: m_LocalScale.z
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3334444, guid: f2ea65b33dcfd4ab3a8d240f8d44e7b8, type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: d31158181a39ea9479014f57a53affa1, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f2ea65b33dcfd4ab3a8d240f8d44e7b8, type: 2}
   m_IsPrefabParent: 0
@@ -333,7 +337,7 @@ GameObject:
   - 54: {fileID: 1425952308}
   m_Layer: 0
   m_Name: Basket
-  m_TagString: Untagged
+  m_TagString: PlayerPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -375,7 +379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 1930837304}
-  damager: {fileID: 0}
+  damager: {fileID: 1930837310}
 --- !u!54 &1425952308
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -458,7 +462,7 @@ GameObject:
   - 54: {fileID: 1435810637}
   m_Layer: 0
   m_Name: Balloon
-  m_TagString: Untagged
+  m_TagString: PlayerPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -490,7 +494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 1930837304}
-  damager: {fileID: 0}
+  damager: {fileID: 1930837310}
 --- !u!114 &1435810639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -515,7 +519,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1
-  m_Center: {x: 0, y: 1.23000002, z: 0}
+  m_Center: {x: 0, y: 2.6099999, z: 0}
 --- !u!4 &1435810641
 Transform:
   m_ObjectHideFlags: 0
@@ -758,6 +762,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 3382666, guid: 0cfa7fb2521024cd09f1f1146d2b2678, type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 19098bfcf840c6e42a3ec50db9a61e7a, type: 3}
     m_RemovedComponents:
     - {fileID: 9539122, guid: 0cfa7fb2521024cd09f1f1146d2b2678, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0cfa7fb2521024cd09f1f1146d2b2678, type: 2}
