@@ -53,6 +53,7 @@
      <Compile Include="Assets\MichaelPattieScripts\BalloonController.cs" />
      <Compile Include="Assets\MichaelPattieScripts\BalloonData.cs" />
      <Compile Include="Assets\MichaelPattieScripts\BlockCollisionResponse.cs" />
+     <Compile Include="Assets\MichaelPattieScripts\BulletResponse.cs" />
      <Compile Include="Assets\MichaelPattieScripts\CheckDifficulty.cs" />
      <Compile Include="Assets\MichaelPattieScripts\FlagBalloonCollision.cs" />
      <Compile Include="Assets\MichaelPattieScripts\FlagBasketCollision.cs" />
@@ -63,6 +64,7 @@
      <Compile Include="Assets\MichaelPattieScripts\ProcessCollision.cs" />
      <Compile Include="Assets\MichaelPattieScripts\ScaleWithAirLevel.cs" />
      <Compile Include="Assets\MichaelPattieScripts\Shoot.cs" />
+     <Compile Include="Assets\Score.cs" />
      <Compile Include="Assets\SeanPavlichek\Scripts\EnemyControllerArcherMonkey.cs" />
      <Compile Include="Assets\SeanPavlichek\Scripts\EnemyControllerAxeMonkey.cs" />
      <Compile Include="Assets\SeanPavlichek\Scripts\EnemyControllerLancerMonkey.cs" />

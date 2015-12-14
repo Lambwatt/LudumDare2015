@@ -12,7 +12,7 @@ public class BlockCollisionResponse : MonoBehaviour{
 
 
 			//Spawn particle system
-			Destroy(this);
+			//Destroy(this);
 		}
 	}
 
