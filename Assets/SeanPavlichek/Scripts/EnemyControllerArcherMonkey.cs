@@ -81,7 +81,7 @@ public class EnemyControllerArcherMonkey : MonoBehaviour {
             fireTimer = 0;
             GameObject newArrow;
             newArrow = Instantiate(arrow, firePosition.transform.position, firePosition.transform.rotation) as GameObject;
-            newArrow.transform.Rotate(0, Random.Range(-fireError, fireError), 0);
+            newArrow.transform.Rotate(Random.Range(-fireError, fireError), 0, 0);
         }
     }
 
@@ -107,7 +107,7 @@ public class EnemyControllerArcherMonkey : MonoBehaviour {
         }
 
         // Moves the unit
-        transform.position -= dir * transform.up * Time.deltaTime * moveSpeed;
+        transform.position += dir * transform.up * Time.deltaTime * moveSpeed;
     }
 
     /** Handles pickup spawning.
