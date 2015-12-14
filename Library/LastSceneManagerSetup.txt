@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/PlayableBuild.unity
+- path: Assets/Levels/Level001.unity
   isLoaded: 1
   isActive: 1

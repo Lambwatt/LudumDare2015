@@ -5,7 +5,7 @@ public class BulletResponse : MonoBehaviour{
 
 	public int points;
 
-	void OnCollisionEnter(Collision col){
+	void OnTriggerEnter(Collider col){
 		Debug.Log ("When hit, found "+col.gameObject.tag);
 		if(col.gameObject.CompareTag("PlayerProjectile")){
 
