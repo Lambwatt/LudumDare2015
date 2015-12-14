@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 120652}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.1399994, y: -.54215765, z: -1}
+  m_LocalPosition: {x: -24.231222, y: -1.5110687, z: -1}
   m_LocalScale: {x: 51.004673, y: 50, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
@@ -41,7 +41,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 24c615b5c6473477293f7883f09adc92, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -49,8 +49,10 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
@@ -72,8 +74,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .122739129, y: .0250514857, z: 1}
-  m_Center: {x: .000182247153, y: -.000215759268, z: 0}
+  m_Size: {x: 0.12273913, y: 0.008520646, z: 1}
+  m_Center: {x: 0.00018222858, y: 0.00081745145, z: 0}
 --- !u!114 &11475284
 MonoBehaviour:
   m_ObjectHideFlags: 1

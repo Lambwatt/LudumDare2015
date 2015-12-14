@@ -692,6 +692,10 @@ Prefab:
       propertyPath: m_Name
       value: teslaCoil (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2358042, guid: d48934173bafa4b4d999ef8c192a9d60, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 475698467dd5e43e38f97ef3c0b57de3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d48934173bafa4b4d999ef8c192a9d60, type: 2}
   m_IsPrefabParent: 0
@@ -737,11 +741,11 @@ Prefab:
     - target: {fileID: 21295826, guid: 37aebb63aa7d1964a86b2619f0eaf8ed, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6ecbcbc9b52fad74dae2e37fdfe4f02a,
+      objectReference: {fileID: 21300000, guid: 71f5742a96afa0b49980f59a889cc551,
         type: 3}
     - target: {fileID: 173772, guid: 37aebb63aa7d1964a86b2619f0eaf8ed, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37aebb63aa7d1964a86b2619f0eaf8ed, type: 2}
@@ -808,6 +812,10 @@ Prefab:
       propertyPath: m_Name
       value: teslaCoil (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2358042, guid: d48934173bafa4b4d999ef8c192a9d60, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 475698467dd5e43e38f97ef3c0b57de3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d48934173bafa4b4d999ef8c192a9d60, type: 2}
   m_IsPrefabParent: 0

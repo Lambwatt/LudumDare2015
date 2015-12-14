@@ -44,8 +44,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 128652}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0109999999, y: -.0222999994, z: -0}
-  m_LocalScale: {x: .153623208, y: .0619999208, z: .0199999996}
+  m_LocalPosition: {x: 0.011, y: -0.0223, z: -0}
+  m_LocalScale: {x: 0.15362321, y: 0.06199992, z: 0.02}
   m_Children: []
   m_Father: {fileID: 448692}
   m_RootOrder: 0
@@ -56,7 +56,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 194924}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.8000002, y: -6.61000013, z: -.519999981}
+  m_LocalPosition: {x: -12.8, y: -6.61, z: -0.52}
   m_LocalScale: {x: 43.125, y: 50, z: 50}
   m_Children:
   - {fileID: 444702}
@@ -72,7 +72,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 192fd660c1b7b48c3bfc06f0f82c6f80, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -80,8 +80,10 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
@@ -96,7 +98,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9aa30429d07f84950a886c980f9963dd, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -104,8 +106,10 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
@@ -134,8 +138,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .179105774, y: .0856125653, z: .0706505775}
-  m_Center: {x: .0119658103, y: -.0118269725, z: .000122184749}
+  m_Size: {x: 0.17910577, y: 0.085612565, z: 0.07065058}
+  m_Center: {x: 0.01196581, y: -0.0118269725, z: 0.00012218475}
 --- !u!65 &6567838
 BoxCollider:
   m_ObjectHideFlags: 1
