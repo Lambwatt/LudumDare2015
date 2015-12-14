@@ -64,7 +64,7 @@ GameObject:
   - 114: {fileID: 11411442}
   m_Layer: 0
   m_Name: ArcherMonkey
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -468,7 +468,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 127548}
   m_LocalRotation: {x: -0.13239056, y: -0.8035665, z: -0.038792178, w: 0.5790068}
-  m_LocalPosition: {x: -9.51222, y: 3.3687458, z: 0.117}
+  m_LocalPosition: {x: 28.71798, y: 3.324372, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 406564}
@@ -930,6 +930,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\BalloonDamager.cs" />
+     <Compile Include="Assets\EnemyStandardization.cs" />
      <Compile Include="Assets\GoToGame.cs" />
      <Compile Include="Assets\GoToTitle.cs" />
      <Compile Include="Assets\MichaelPattieScripts\AddLevel.cs" />

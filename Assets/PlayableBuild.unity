@@ -690,6 +690,7 @@ GameObject:
   - 4: {fileID: 1435399472}
   - 114: {fileID: 1435399471}
   - 114: {fileID: 1435399473}
+  - 114: {fileID: 1435399474}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -746,6 +747,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 1064538745}
+--- !u!114 &1435399474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1435399470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e7e029990c469c4bbc68c17ef497292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies: []
 --- !u!1 &1435810636
 GameObject:
   m_ObjectHideFlags: 0
@@ -1124,7 +1137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthText: {fileID: 1523086418}
-  speed: 5
+  speed: 3
   inflatCoefficient: 0.02
   deflateCoefficient: 0.01
   airContent: 0.1
