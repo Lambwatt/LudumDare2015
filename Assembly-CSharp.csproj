@@ -38,10 +38,10 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
-      <HintPath>C:/Program Files/UnityUpdated/Editor/Data/Managed/UnityEngine.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>C:/Program Files/UnityUpdated/Editor/Data/Managed/UnityEditor.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -59,7 +59,9 @@
      <Compile Include="Assets\MichaelPattieScripts\ProcessCollision.cs" />
      <Compile Include="Assets\MichaelPattieScripts\ScaleWithAirLevel.cs" />
      <Compile Include="Assets\MichaelPattieScripts\Shoot.cs" />
-     <Compile Include="Assets\SeanPavlichek\Scripts\EnemyControllerBasic.cs" />
+     <Compile Include="Assets\SeanPavlichek\Scripts\EnemyControllerArcherMonkey.cs" />
+     <Compile Include="Assets\SeanPavlichek\Scripts\EnemyControllerAxeMonkey.cs" />
+     <Compile Include="Assets\SeanPavlichek\Scripts\EnemyControllerLancerMonkey.cs" />
      <Compile Include="Assets\SeanPavlichek\Scripts\Explosion.cs" />
      <Compile Include="Assets\SeanPavlichek\Scripts\Projectile.cs" />
      <Compile Include="Assets\SeanPavlichek\Scripts\TurretFiring.cs" />
@@ -67,10 +69,10 @@
      <Compile Include="Assets\SpawnManager.cs" />
      <None Include="Assets\Art\Art Asset List.txt" />
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files/UnityUpdated/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
- <HintPath>C:/Program Files/UnityUpdated/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
