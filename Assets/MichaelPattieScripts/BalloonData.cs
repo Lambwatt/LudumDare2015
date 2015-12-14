@@ -46,7 +46,11 @@ public class BalloonData : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if(health<100){
+
+			Application.LoadLevel("GameOver");
+			
+		}
 	}
 
 	public void cancelPowerups(){

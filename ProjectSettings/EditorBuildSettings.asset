@@ -25,3 +25,9 @@ EditorBuildSettings:
     path: Assets/Levels/Level011.unity
   - enabled: 1
     path: Assets/Levels/Level013.unity
+  - enabled: 1
+    path: Assets/PlayableBuild.unity
+  - enabled: 1
+    path: Assets/GameOver.unity
+  - enabled: 1
+    path: Assets/TitleScreen.unity
