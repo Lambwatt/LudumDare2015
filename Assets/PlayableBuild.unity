@@ -333,7 +333,7 @@ GameObject:
   - 54: {fileID: 1425952308}
   m_Layer: 0
   m_Name: Basket
-  m_TagString: Untagged
+  m_TagString: PlayerPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -375,7 +375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 1930837304}
-  damager: {fileID: 0}
+  damager: {fileID: 1930837310}
 --- !u!54 &1425952308
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -458,7 +458,7 @@ GameObject:
   - 54: {fileID: 1435810637}
   m_Layer: 0
   m_Name: Balloon
-  m_TagString: Untagged
+  m_TagString: PlayerPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -490,7 +490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 1930837304}
-  damager: {fileID: 0}
+  damager: {fileID: 1930837310}
 --- !u!114 &1435810639
 MonoBehaviour:
   m_ObjectHideFlags: 0

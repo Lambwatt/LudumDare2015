@@ -14,5 +14,6 @@ public class FlagBalloonCollision : MonoBehaviour {
 	void OnTriggerEnter(Collider other){
 		//Debug.LogError("flagged baslloon");
 		data.objectHittingBalloon = other.tag;
+		damager.damagePlayer(other.GetComponent<BlockCollisionResponse>().damage);
 	}
 }
