@@ -12,6 +12,7 @@ GameObject:
   - 65: {fileID: 6561858}
   - 23: {fileID: 2324162}
   - 114: {fileID: 11456548}
+  - 95: {fileID: 9504466}
   m_Layer: 0
   m_Name: FlyingHouse
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 134558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.2338772, y: 4.0143795, z: 0}
+  m_LocalPosition: {x: 3.04068375, y: 5.09194183, z: 0}
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -74,6 +75,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.37339401, y: 5.47623062, z: 6.93587685}
   m_Center: {x: -.0973110199, y: 2.23811626, z: -.275720596}
+--- !u!95 &9504466
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 134558}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dd259afcb182c4571a6786d89d1cb1dc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11456548
 MonoBehaviour:
   m_ObjectHideFlags: 1
