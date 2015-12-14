@@ -12,6 +12,7 @@ GameObject:
   - 23: {fileID: 2347024}
   - 95: {fileID: 9585124}
   - 135: {fileID: 13568586}
+  - 114: {fileID: 11445438}
   m_Layer: 0
   m_Name: SawBlade
   m_TagString: Untagged
@@ -25,9 +26,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 127090}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: -28.712, y: 2.517, z: -0}
-  m_LocalScale: {x: 32.5, y: 50, z: 28.749964}
+  m_LocalRotation: {x: -.707106829, y: 2.98023252e-07, z: 2.98023252e-07, w: -.707106829}
+  m_LocalPosition: {x: -22.7037239, y: 4.63999987, z: 0}
+  m_LocalScale: {x: 32.5, y: 50, z: 28.7499657}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -49,10 +50,8 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
@@ -73,7 +72,7 @@ Animator:
   m_GameObject: {fileID: 127090}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 5c4245bdc3cd5429bbae8861a8e0c8df, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fbcc90280772a4f3aa54f866a1a1417c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -81,6 +80,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11445438
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 127090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c40445e4a7546b3969f154db10ef08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 200
 --- !u!135 &13568586
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -91,8 +102,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.011
-  m_Center: {x: 9.313226e-10, y: 0, z: 0.000000008381903}
+  m_Radius: .0109999999
+  m_Center: {x: 9.31322575e-10, y: 0, z: 8.38190317e-09}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

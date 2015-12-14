@@ -14,5 +14,6 @@ public class FlagBasketCollision : MonoBehaviour {
 	void OnTriggerEnter(Collider other){
 		//Debug.LogError("flagged basket");
 		data.objectHittingBasket = other.tag;
+		damager.damagePlayer(other.GetComponent<BlockCollisionResponse>().damage);
 	}
 }

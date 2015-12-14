@@ -30,10 +30,10 @@ public class ProcessCollision : MonoBehaviour {
 	[HideInInspector]public bool immunityOn;
 	void applyCollisionResults(string colTag){
 		switch(colTag){
-		case "Sandbag":
-			data.cancelPowerups();
-			data.deflateCoefficientPowerOn = true;
-			break;
+//		case "Sandbag":
+//			data.cancelPowerups();
+//			data.deflateCoefficientPowerOn = true;
+//			break;
 //		case "Sandbag":
 //			data.cancelPowerups();
 //			data.deflatePower = true;
