@@ -422,6 +422,7 @@ MonoBehaviour:
   - Level001
   player: {fileID: 1930837305}
   sceneWidth: 64
+  levelCount: 0
 --- !u!4 &1435399472
 Transform:
   m_ObjectHideFlags: 0
