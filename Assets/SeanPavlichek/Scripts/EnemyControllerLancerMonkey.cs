@@ -121,7 +121,7 @@ public class EnemyControllerLancerMonkey : MonoBehaviour
         }
 
         // Moves the unit
-        transform.position -= dir * transform.up * Time.deltaTime * moveSpeed;
+        transform.position += dir * transform.up * Time.deltaTime * moveSpeed;
     }
 
     /** Handles the update function when the unit is in the Ramming AIMode.
@@ -129,13 +129,14 @@ public class EnemyControllerLancerMonkey : MonoBehaviour
     void UpdateRamming()
     {
         // Moves the unit
-        transform.position -= transform.right * Time.deltaTime * ramSpeed;
+        transform.position += transform.forward * Time.deltaTime * ramSpeed;
     }
 
     /** Determines whether the unit should switch AI modes.
     */
     void determineAIState()
     {
+        /**
         // Checks if the player is in range
         // bool canSee = CanSeeTarget("Player");
         Vector3 dirToPlayer = player.transform.position - transform.position;
@@ -167,6 +168,18 @@ public class EnemyControllerLancerMonkey : MonoBehaviour
             // Changes the color of the unit
             //GetComponent<Renderer>().material.color = Color.yellow;
         }
+
+        **/
+
+        Vector3 dirToPlayer = player.transform.position - gameObject.transform.position;
+
+        if (dirToPlayer.x < 0 && dirToPlayer.y < -3 && dirToPlayer.y > -7)
+        {
+            // Change the state to SteerTowards
+            CurrentAIState = AIMode.Ramming;
+
+            playerSeen = true;
+        }
     }
 
     /** Handles pickup spawning.
@@ -186,13 +199,16 @@ public class EnemyControllerLancerMonkey : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            // Destroys the enemy ship
+            // Damages the player
+            playerDamager.damagePlayer(1);
+
+            // Destroys the enemy
             Destroy(gameObject);
         }
         else if (other.tag == "PlayerProjectile")
         {
             // Adds to the player score
-            //playerData.ModScore(scoreValue);
+            playerData.ModScore(scoreValue);
 
             // Destroys the enemy if it encounters a projectile
             Destroy(gameObject);

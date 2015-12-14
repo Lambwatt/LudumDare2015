@@ -226,13 +226,16 @@ public class EnemyControllerAxeMonkey : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            // Destroys the enemy ship
+            // Damages the player
+            playerDamager.damagePlayer(1);
+
+            // Destroys the enemy
             Destroy(gameObject);
         }
         else if (other.tag == "PlayerProjectile")
         {
             // Adds to the player score
-            //playerData.ModScore(scoreValue);
+            playerData.ModScore(scoreValue);
 
             // Destroys the enemy if it encounters a projectile
             Destroy(gameObject);

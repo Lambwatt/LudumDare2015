@@ -10,13 +10,13 @@ public class Projectile : MonoBehaviour {
     // Use this for initialization
 
     void Start () {
-        gameObject.transform.Rotate(0, 0, 180);
+        //gameObject.transform.Rotate(0, 0, 180);
         Destroy(gameObject, 5.0f);
     }
 
     // Update is called once per frame
     void Update() {
-        gameObject.transform.Translate(-speed, 0, 0);
+        gameObject.transform.Translate(0, 0, speed);
     }
 
     // Called when the bullet collides with something

@@ -23,9 +23,9 @@ public class Balloon : MonoBehaviour {
 	public void inflate(){
 		data.airContent += data.inflatCoefficient;
 
-//		if(data.inCoefficientPowerOn){
-//			data.airContent +=data.inflatCoefficientPower;
-//		}
+		if(data.inflatCoefficientPowerOn){
+			data.airContent += data.inflatCoefficientPower;
+		}
 
 		if(data.airContent>1.0f)
 			data.airContent = 1.0f;
@@ -33,6 +33,12 @@ public class Balloon : MonoBehaviour {
 
 	private void deflate(){
 		data.airContent -= data.deflateCoefficient;
+
+		if(data.deflateCoefficientPowerOn){
+			data.airContent -= data.deflateCoefficientPower;
+		}
+
+
 		if(data.airContent<-1.0f)
 			data.airContent = -1.0f;
 	}

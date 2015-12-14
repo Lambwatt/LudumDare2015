@@ -3,30 +3,35 @@ using System.Collections;
 
 public class AddLevel : MonoBehaviour {
 
-	public GameObject[] levels;
+	public string[] levels;
 	public Transform player;
-	public float screenWidth;
+	public float sceneWidth;
 	private int levelIndex = 0;
-	private float lastLevelX = 0;
+	private float nextLevelX = 0;
+	[HideInInspector] public int levelCount = 0;
 
 	// Use this for initialization
 	void Start () {
-		Instantiate(levels[levelIndex], new Vector3(player.position.x-(screenWidth*.25f),0,0), Quaternion.identity);
-		updateIndex();
-		Instantiate(levels[levelIndex], new Vector3(player.position.x+(screenWidth*.75f),0,0), Quaternion.identity);
+		Application.LoadLevelAdditive(levels[levelIndex]);
 		updateIndex();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(player.position.x-lastLevelX > screenWidth){
-			Instantiate(levels[levelIndex], new Vector3(player.position.x+(screenWidth*.75f),0,0), Quaternion.identity);
-			lastLevelX = player.position.x;
+		if(player.position.x>=nextLevelX ){
+			Application.LoadLevelAdditive(levels[levelIndex]);
+			nextLevelX = player.position.x+sceneWidth;
 			updateIndex();
 		}
 	}
 
 	private void updateIndex(){
 		levelIndex = (levelIndex+1)%levels.Length;
+	}
+
+	public float getNextScenePosition(){
+		levelCount++;
+		Debug.Log ("level count  = "+levelCount);
+		return sceneWidth*(levelCount-1);
 	}
 }
