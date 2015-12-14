@@ -69,6 +69,8 @@ public class EnemyControllerLancerMonkey : MonoBehaviour
         // Destroys this unit after a certain period of time
         // Destroy(gameObject, 5.0f);
 
+		player = GameObject.FindGameObjectWithTag("Player");
+
         if (player != null) // The player ship will be null if the game is over
         {
             playerData = player.GetComponent<BalloonData>();
