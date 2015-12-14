@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149840}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 337.79425, y: 237.70827, z: 0}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
@@ -41,7 +41,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: beae1dc59593b4f0186df79dfe12727d, type: 2}
+  - {fileID: 2100000, guid: d86a5904ebac4446082cdb3ebf04607a, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -63,7 +63,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149840}
-  m_Mesh: {fileID: 4300000, guid: 37a4a1809832e42cd824a0f1cabce8c4, type: 3}
+  m_Mesh: {fileID: 4300002, guid: 37a4a1809832e42cd824a0f1cabce8c4, type: 3}
 --- !u!95 &9522474
 Animator:
   serializedVersion: 3
@@ -104,6 +104,10 @@ Prefab:
       propertyPath: speed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300002, guid: 37a4a1809832e42cd824a0f1cabce8c4, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 149840}
