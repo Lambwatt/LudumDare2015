@@ -57,6 +57,12 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -68,9 +74,11 @@
     <Compile Include="Assets\MichaelPattieScripts\BalloonController.cs" />
     <Compile Include="Assets\MichaelPattieScripts\BalloonData.cs" />
     <Compile Include="Assets\MichaelPattieScripts\BlockCollisionResponse.cs" />
+    <Compile Include="Assets\MichaelPattieScripts\CheckDifficulty.cs" />
     <Compile Include="Assets\MichaelPattieScripts\FlagBalloonCollision.cs" />
     <Compile Include="Assets\MichaelPattieScripts\FlagBasketCollision.cs" />
     <Compile Include="Assets\MichaelPattieScripts\Follow.cs" />
+    <Compile Include="Assets\MichaelPattieScripts\GetInFrontAndDieOffScreen.cs" />
     <Compile Include="Assets\MichaelPattieScripts\MoveRight.cs" />
     <Compile Include="Assets\MichaelPattieScripts\MoveRightIndependent.cs" />
     <Compile Include="Assets\MichaelPattieScripts\ProcessCollision.cs" />
@@ -82,6 +90,8 @@
     <Compile Include="Assets\SeanPavlichek\Scripts\Explosion.cs" />
     <Compile Include="Assets\SeanPavlichek\Scripts\Projectile.cs" />
     <Compile Include="Assets\SeanPavlichek\Scripts\TurretFiring.cs" />
+    <Compile Include="Assets\SpawnEnemy.cs" />
+    <Compile Include="Assets\SpawnManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Art\Art Asset List.txt" />
